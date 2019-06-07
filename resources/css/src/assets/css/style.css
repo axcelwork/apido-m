@@ -59,6 +59,7 @@ section {
   line-break: strict;
   letter-spacing: 0.1rem;
 	color: #333;
+	page-break-inside: avoid;
 }
 body {
   -webkit-text-size-adjust: none;

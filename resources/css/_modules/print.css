@@ -1,12 +1,12 @@
 @media (--print) {
 	html, body {
 		width: 1024px;
-		zoom: 0.762;
+		zoom: 0.748;
 	}
 	body {
 		background-color: #fff !important;
 	}
-
+	
 	#wrapper {
 		&.is_grid {
 			display: block !important;
