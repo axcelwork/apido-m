@@ -3,7 +3,8 @@
 @import "../../../_modules/_component.css";
 
 html {
-  font-size: 10px;
+	font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -66,7 +67,7 @@ body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   background-color: #FAFDFF;
-  font-feature-settings: "palt";
+	font-feature-settings: "palt";
 }
 
 li {
@@ -121,7 +122,6 @@ button {
   vertical-align: middle;
   appearance: none;
 }
-
 
 #wrapper {
 	position: relative;
