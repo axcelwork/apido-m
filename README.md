@@ -1,5 +1,5 @@
-# rapidom
-（=Rakuni API Document を作れる。Markdownで。）
+# apidom
+（=API Document を Markdown でつくる。）<br>
 Markdown形式でAPIドキュメントを作成できます。
 
 ## 使い方
