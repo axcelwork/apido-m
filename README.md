@@ -2,6 +2,9 @@
 （=API Document を Markdown でつくる。）<br>
 Markdown形式でAPIドキュメントを作成できます。
 
+## DEMO
+[demo](https://axcelwork.github.io/apidom/dist/index.html)
+
 ## 使い方
 ### 1. クローンする
 
