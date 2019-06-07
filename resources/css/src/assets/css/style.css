@@ -125,12 +125,17 @@ button {
 
 #wrapper {
 	position: relative;
+	padding-bottom: 50px;
 
 	&.is_grid {
 		display: grid;
 		grid-template-columns: 300px 1fr;
   	grid-template-rows: 1fr;
 	}
+}
+
+#print_name {
+	display: none;
 }
 
 #nav {

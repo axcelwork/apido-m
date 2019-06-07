@@ -13,6 +13,15 @@
 		}
 	}
 
+	#print_name {
+		display: block !important;
+		background-color: #eee;
+		padding: 20px 50px;
+		font-size: 14px;
+		font-weight: bold;
+		color: #333;
+	}
+
 	#nav {
 		display: none !important;
 	}
