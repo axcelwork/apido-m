@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title><%- include( '../tmp/title' ) %></title>
+    <meta name="robots" content="noindex,follow" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen,print">
+
+</head>
+<body id="pagetop">
+    <div id="wrapper" class="is_grid">
+        <div id="nav">
+            <h1><%- include( '../tmp/title' ) %></h1>
+            <ul>
+                <%- include( '../tmp/nav' ) %>
+            </ul>
+        </div>
+        <div id="contents">
+            <%- include( '../tmp/markdown' ) %>
+        </div>
+    </div>
+</body>
+</html>

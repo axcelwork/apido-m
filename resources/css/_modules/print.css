@@ -1,0 +1,64 @@
+@media (--print) {
+	html, body {
+		width: 1024px;
+		zoom: 0.762;
+	}
+	body {
+		background-color: #fff !important;
+	}
+
+	#wrapper {
+		&.is_grid {
+			display: block !important;
+		}
+	}
+
+	#nav {
+		display: none !important;
+	}
+
+	#contents {
+		h2 {
+			color: #333 !important;
+			border-bottom-color: 2px solid #ccc !important;
+		}
+
+		h3 {
+			color: #333 !important;
+		}
+
+		p {
+			color: #333 !important;
+		}
+
+		.source {
+			background-color: #eee !important;
+
+			strong {
+				color: #333 !important;
+			}
+		
+			pre {
+				background-color: #333 !important;
+				color: #fff !important;
+			}
+		}
+
+		table {
+			thead {
+				th {
+					color: #333 !important;
+					border-bottom-color: #ccc !important;
+				}
+			}
+			
+			tbody {
+				tr {
+					td {
+						color: #333 !important;
+					}
+				}
+			}
+		}
+	}
+}

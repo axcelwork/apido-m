@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+@import "../../../_modules/_component.css";
+
+html {
+  font-size: 10px;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+cite,
+em,
+pre,
+img,
+small,
+strong,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-style: normal;
+  background: transparent;
+  box-sizing: border-box;
+  line-break: strict;
+  letter-spacing: 0.1rem;
+	color: #333;
+}
+body {
+  -webkit-text-size-adjust: none;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ",
+    Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  background-color: #FAFDFF;
+  font-feature-settings: "palt";
+}
+
+li {
+  list-style-type: none;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+*:before *:after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(100, 100, 100, 0.5);
+  text-decoration: none;
+  color: $link-color;
+  box-sizing: border-box;
+}
+
+hr {
+  margin: 20px 0;
+  padding: 0;
+  border-color: #333;
+  border-style: solid;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+input,
+select,
+button {
+  vertical-align: middle;
+  appearance: none;
+}
+
+
+#wrapper {
+	position: relative;
+
+	&.is_grid {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+  	grid-template-rows: 1fr;
+	}
+}
+
+#nav {
+	grid-column: 1;
+	grid-row: 1;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 300px;
+	height: 100vh;
+	background-color: #F4F6F8;
+	padding-top: 30px;
+
+	h1 {
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	ul {
+		li {
+			a {
+				display: block;
+				font-size: 14px;
+				font-weight: bold;
+				color: #818D96;
+				padding: 15px 20px;
+
+				word-break: break-all;
+				white-space: pre-wrap ;
+				line-height: 1.5;
+			}
+
+			&.current {
+				background-color: #BCC8D1;
+
+				a {
+					flex-basis: inherit;
+					color: #fff;
+				}
+			}
+		
+		}
+	}
+}
+
+
+#contents {
+	grid-column: 2;
+	grid-row: 1;
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		color: #818D96;
+
+		margin: 150px 50px 0;
+		padding-bottom: 20px;
+		border-bottom: 2px solid #F3F5F5;
+
+		&:first-child {
+			margin-top: 50px;
+		}
+	}
+
+	p {
+		font-size: 14px;
+		color: #858C92;
+
+		padding-top: 20px;
+		margin: 0 50px 0;
+	}
+
+	.index {
+		margin: 40px 50px 0;
+
+		& > ul {
+			display: flex;
+			ustify-content: flex-start;
+		
+			& > li {
+				font-size: 11px;
+				font-weight: bold;
+				color: #fff;
+				border-radius: 5px;
+
+				margin-right: 5px;
+
+				background-color: #3BBF87;
+				padding: 10px;
+
+				&.post {
+					background-color: #643BBF;
+				}
+				&.get {
+					background-color: #59BF3B;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.source {
+		background-color: #525E67;
+		padding: 30px 0 30px;
+		margin-top: 40px;
+
+		& > p {
+			margin-bottom: 10px;
+
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+		strong {
+			font-size: 12px;
+			font-weight: bold;
+			color: #A6B5BD;
+		}
+
+		pre {
+			margin: 0 50px;
+			padding: 20px;
+			background-color: #434F58;
+			border-radius: 8px;
+
+			color: #B8C3CC;
+			font-size: 13px;
+		}
+
+		code {
+			word-break: break-all;
+			white-space: pre-wrap ;
+			line-height: 1.5;
+		}
+	}
+
+	h3 {
+		font-size: 16px;
+		font-weight: bold;
+		color: #818D96;
+		margin: 40px 50px 0;
+	}
+
+	.table_block {
+		margin: 20px 50px 0;
+	}
+	
+	table {
+		width: 100%;
+		table-layout: fixed;
+
+		thead {
+			th {
+				font-size: 12px;
+				font-weight: bold;
+				color: #A6B5BD;
+
+				border-bottom: 1px solid #F3F5F5;
+				padding-bottom: 15px;
+				text-align: left;
+
+				&:first-child {
+						font-weight: bold;
+						width: 200px;
+					}
+			}
+		}
+		
+		tbody {
+			tr {
+				td {
+					padding-top: 20px;
+					text-align: left;
+
+					font-size: 14px;
+					color: #80878F;
+					word-break: break-all;
+					padding-right: 20px;
+					line-height: 1.5;
+					vertical-align: top;
+
+					&:first-child {
+						font-weight: bold;
+						width: 200px;
+					}
+				}
+			}
+			tr:first-child {
+				td {
+					padding-top: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (--smp-view) {
+	.table_block {
+		overflow-x: auto;
+	}
+	table {
+		width: 500px !important;
+	}
+}
+

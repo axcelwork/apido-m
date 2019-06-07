@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <title>APIDO/M</title>
+    <meta name="robots" content="noindex,follow" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen,print">
+
+</head>
+<body id="pagetop">
+    <div id="wrapper" class="is_grid">
+        <div id="nav">
+            <h1>APIDO/M</h1>
+            <ul>
+                <li><a href="#/add">/add</a></li>
+<li><a href="#/employee">/employee</a></li>
+<li><a href="#/employee/{id}">/employee/{id}</a></li>
+
+            </ul>
+        </div>
+        <div id="contents">
+            <h2 id="/add">/add</h2>
+<p>追加を行います。</p>
+<div class="index">
+
+<ul><li>HTTPS</li>
+<li class="post">POST</li>
+<li>application/json</li>
+</ul></div>
+
+
+<div class="source">
+
+<p><strong>PRODUCTION</strong></p>
+<pre><code>https://example.com/add</code></pre><p><strong>STAGING</strong></p>
+<pre><code>https://stg.example.com/add</code></pre></div>
+
+<h3 id="リクエスト">リクエスト</h3>
+<div class="table_block"><table><thead><tr>
+<th>パラメータ名</th>
+<th>論理名</th>
+<th align="center">必須</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead><tbody><tr>
+<td>name</td>
+<td>氏名</td>
+<td align="center"></td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>tel</td>
+<td>電話番号</td>
+<td align="center"></td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>mail</td>
+<td>メールアドレス</td>
+<td align="center"></td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+</tbody></table></div><h3 id="レスポンス">レスポンス</h3>
+<div class="table_block"><table><thead><tr>
+<th>パラメータ名</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead><tbody><tr>
+<td>status</td>
+<td>Boolean</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>message</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+</tbody></table></div><div class="source">
+
+<pre><code class="language-json">[
+  {
+    &quot;status&quot;: Boolean,
+    &quot;message&quot;: String
+  }
+]</code></pre>
+</div>
+
+<h3 id="サンプル">サンプル</h3>
+<div class="source">
+
+<p><strong>REQUEST</strong></p>
+<pre><code>https://example.com/add</code></pre><p><strong>RESPONSE</strong></p>
+<pre><code>[
+  {
+    &quot;status&quot;: &quot;success&quot;,
+    &quot;message&quot;: &quot;成功しました&quot;
+  }
+]</code></pre></div>
+
+
+
+<h2 id="/employee">/employee</h2>
+<p>employeeデータを取得します。</p>
+<div class="index">
+
+<ul><li>HTTPS</li>
+<li class="get">GET</li>
+<li>application/json</li>
+</ul></div>
+
+
+<div class="source">
+
+<p><strong>PRODUCTION</strong></p>
+<pre><code>https://example.com/employee</code></pre><p><strong>STAGING</strong></p>
+<pre><code>https://stg.example.com/employee</code></pre></div>
+
+<h3 id="レスポンス">レスポンス</h3>
+<div class="table_block"><table><thead><tr>
+<th>パラメータ名</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead><tbody><tr>
+<td>id</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>employee_name</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>employee_age</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+</tbody></table></div><div class="source">
+
+<p><strong>成功</strong></p>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: String,
+    &quot;employee_name&quot;: String,
+    &quot;employee_age&quot;: String
+  },
+  {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;employee_name&quot;: String,
+    &quot;employee_age&quot;: String
+  }
+  ...
+]</code></pre>
+<p><strong>失敗</strong></p>
+<pre><code class="language-json">[
+  {
+    &quot;message&quot;: String
+  }
+]</code></pre>
+</div>
+
+
+<h3 id="サンプル">サンプル</h3>
+<div class="source">
+
+<p><strong>REQUEST</strong></p>
+<pre><code>https://example.com/employee</code></pre><p><strong>RESPONSE</strong></p>
+<pre><code>[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;employee_name&quot;: &quot;employee_name&quot;
+    &quot;employee_age&quot;: &quot;employee_age&quot;
+  },
+  {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;employee_name&quot;: &quot;employee_name&quot;
+    &quot;employee_age&quot;: &quot;employee_age&quot;
+  }
+  ...
+]</code></pre></div>
+
+
+<h2 id="/employee/{id}">/employee/{id}</h2>
+<p>employeeデータを取得します。</p>
+<div class="index">
+
+<ul><li>HTTPS</li>
+<li class="get">GET</li>
+<li>application/json</li>
+</ul></div>
+
+
+<div class="source">
+
+<p><strong>PRODUCTION</strong></p>
+<pre><code>https://example.com/employee/{id}</code></pre><p><strong>STAGING</strong></p>
+<pre><code>https://stg.example.com/employee/{id}</code></pre></div>
+
+<h3 id="リクエスト">リクエスト</h3>
+<div class="table_block"><table><thead><tr>
+<th>パラメータ名</th>
+<th>論理名</th>
+<th align="center">必須</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead><tbody><tr>
+<td>id</td>
+<td>ID</td>
+<td align="center"></td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+</tbody></table></div><h3 id="レスポンス">レスポンス</h3>
+<div class="table_block"><table><thead><tr>
+<th>パラメータ名</th>
+<th>型</th>
+<th>説明</th>
+</tr>
+</thead><tbody><tr>
+<td>id</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>employee_name</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+<tr>
+<td>employee_age</td>
+<td>String</td>
+<td>パラメーターの備考</td>
+</tr>
+</tbody></table></div><div class="source">
+
+<p><strong>成功</strong></p>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;: String,
+    &quot;employee_name&quot;: String,
+    &quot;employee_age&quot;: String
+  }
+]</code></pre>
+<p><strong>失敗</strong></p>
+<pre><code class="language-json">[
+  {
+    &quot;message&quot;: String
+  }
+]</code></pre>
+</div>
+
+
+
+<h3 id="サンプル">サンプル</h3>
+<div class="source">
+
+<p><strong>REQUEST</strong></p>
+<pre><code>https://example.com/employee/1</code></pre><p><strong>RESPONSE</strong></p>
+<pre><code>[
+  {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;employee_name&quot;: &quot;employee_name&quot;
+    &quot;employee_age&quot;: &quot;employee_age&quot;
+  }
+]</code></pre></div>
+
+        </div>
+    </div>
+</body>
+</html>
